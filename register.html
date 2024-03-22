@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/register.css">
+        <title>Register</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dst/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU\auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	    <script src="js/register.js"></script>
+    </head>
+    
+    <body>
+        <div id="top">
+            <h1> Register <strong> here </strong> </h1>
+            <br>
+            <form class="form" class="shadow w-450 p-3" id="register" method="post" action="">
+                <lable for="">UserName</lable><br>
+                <br>
+                <input class="form1" id="name" type="text" value="" placeholder="Username" required></br>
+                <br>
+                <lable>Email</lable><br>
+                <br>
+                <input class="form1" id ="email" type="email" value=""  placeholder="Email" required></br>
+                <br>
+                <lable>Password</lable><br>
+                <br>
+                <input class="form1" id="password1" type="password" value=""  placeholder="Password" required> </br>
+                <br>
+                <lable>Confirm Password</lable><br>
+                <br>
+                <input class="form1" id="password2" type="password" value=""  placeholder="Password" required></br>
+                <br>
+                <br>
+                <input id="sub" onclick="hit()" type="button" value="submit">
+            </form>
+            <br>
+            <br>
+            <div id="registration-message"></div>
+            <h3 id="text"> if already have an account <a href="login.html"> Login </a> </h3>
+        </div>
+    </body>

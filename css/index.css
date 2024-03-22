@@ -1,0 +1,28 @@
+ul {
+  list-style-type: none;
+  margin-top: 10%;
+  padding: 0;
+  text-align: center;
+  padding: 20px;
+}
+li {
+  display: inline;
+  padding: 20px;
+}
+a {
+  padding: 20px;
+  text-decoration: none;
+  color: black;
+  background-color: #1e1e1e;
+  border-radius: 2px;
+}
+a:hover {
+  color: red;
+}
+body {
+  background-color: #1e1e1e;
+}
+#text {
+  text-align: center;
+  margin-top: 100px;
+}

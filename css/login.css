@@ -1,0 +1,54 @@
+body {
+  background-color: #1e1e1e;
+}
+h1,
+form {
+  text-align: center;
+}
+input {
+  border-radius: 10px;
+  width: 100%;
+  display: inline-block;
+  height: 35px;
+}
+#sub {
+  width: 3cm;
+}
+
+body {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form1 {
+  border-style: groove;
+  border-color: #1e1e1e;
+}
+input:hover {
+  color: rgb(70, 105, 139);
+}
+h1 {
+  text-shadow: 2px 2px 2px rgb(165, 151, 167);
+}
+#sub:hover {
+  background-color: rgb(198, 225, 225);
+}
+#sub {
+  border-style: groove;
+  border-color: rgb(43, 114, 143);
+}
+#top {
+  background-color: #1e1e1e;
+  width: 20%;
+  padding: 70px;
+  min-width: 275px;
+  border: 2px solid #1e1e1e;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 10px;
+}
+#top:hover {
+  background-color: #1e1e1e;
+}
