@@ -1,5 +1,5 @@
 body {
-  background-color: #1e1e1e;
+  background-color: #f0f0f0; /* Light gray background */
 }
 h1,
 form {
@@ -23,7 +23,7 @@ body {
 }
 .form1 {
   border-style: groove;
-  border-color: #1e1e1e;
+  border-color: #f0f0f0; /* Light gray border */
 }
 input:hover {
   color: rgb(70, 105, 139);
@@ -39,16 +39,16 @@ h1 {
   border-color: rgb(43, 114, 143);
 }
 #top {
-  background-color: #1e1e1e;
+  background-color: #f0f0f0; /* Light gray background */
   width: 20%;
   padding: 70px;
   min-width: 275px;
-  border: 2px solid #1e1e1e;
+  border: 2px solid #f0f0f0; /* Light gray border */
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   border-radius: 10px;
 }
 #top:hover {
-  background-color: #1e1e1e;
+  background-color: #f0f0f0; /* Light gray background */
 }

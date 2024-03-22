@@ -12,15 +12,15 @@ li {
 a {
   padding: 20px;
   text-decoration: none;
-  color: black;
-  background-color: #1e1e1e;
+  color: #333; /* Dark gray text color */
+  background-color: #f0f0f0; /* Light gray background */
   border-radius: 2px;
 }
 a:hover {
   color: red;
 }
 body {
-  background-color: #1e1e1e;
+  background-color: #f0f0f0; /* Light gray background */
 }
 #text {
   text-align: center;

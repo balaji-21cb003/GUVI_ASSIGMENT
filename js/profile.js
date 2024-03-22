@@ -18,7 +18,6 @@ $(document).ready(function () {
         window.location.href = "display.html";
       },
       error: function (error) {
-        console.error("Error:", error);
         alert("Failed to save profile. Please try again.");
       },
     });

@@ -21,22 +21,32 @@ if (empty($name) || empty($email) || empty($password1)) {
     exit;
 }
 if ($password1 != $password2) {
-    echo "Wrong password";
-    exit;
-}
-$user = mysqli_query($conn, "SELECT * FROM userdata WHERE name = '$name'");
-if (mysqli_num_rows($user) > 0) {
-    echo "username has already taken";
-    exit;
-}
-$user = mysqli_query($conn, "SELECT * FROM userdata WHERE email = '$email'");
-if (mysqli_num_rows($user) > 0) {
-    echo "email has already taken";
+    echo "Passwords do not match";
     exit;
 }
 
-$query = "INSERT INTO userdata (name, email, password1, password2) VALUES ('$name', '$email', '$password1', '$password2')";
-if (mysqli_query($conn, $query)) {
+// Prepare SQL statements to prevent SQL injection
+$stmt = mysqli_prepare($conn, "SELECT * FROM user WHERE name = ?");
+mysqli_stmt_bind_param($stmt, "s", $name);
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
+if (mysqli_num_rows($result) > 0) {
+    echo "Username is already taken";
+    exit;
+}
+
+$stmt = mysqli_prepare($conn, "SELECT * FROM user WHERE email = ?");
+mysqli_stmt_bind_param($stmt, "s", $email);
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
+if (mysqli_num_rows($result) > 0) {
+    echo "Email is already taken";
+    exit;
+}
+
+$stmt = mysqli_prepare($conn, "INSERT INTO user (name, email, password1, password2) VALUES (?, ?, ?, ?)");
+mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $password1, $password2);
+if (mysqli_stmt_execute($stmt)) {
     echo "Registration Successful";
 
     // Create a new Predis client instance
@@ -54,12 +64,10 @@ if (mysqli_query($conn, $query)) {
         'password2' => $password2,
     ];
     $client->hmset("user:$email", $userData);
-} 
-// else {
-//     echo "Error: " . $query . "<br>" . mysqli_error($conn);
-// }
+} else {
+    echo "Error: " . mysqli_error($conn);
+}
 
+mysqli_stmt_close($stmt);
 mysqli_close($conn);
-
-// LOGIN
 ?>
